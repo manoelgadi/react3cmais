@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script src="js/react.min.js"> </script>
+	<script src="js/react-dom.min.js"> </script>
+	<script src="js/browser.min.js"> </script>
+
+</head>
+
+<body>
+	<div id="id1"> </div>
+	<div id="id2"> </div>
+	<div id="id3"> </div>
+	<div id="id4"> </div>
+	<div id="id5"> </div>
+	<div id="id6"> </div>
+	
+	<script type="text/babel">
+		var Tarjeta = React.createClass(
+				{ //El parametro de createClass es un JSON, 
+				 //por lo que esta llave es para un JSON
+					render: function() //Una función anonima
+							{//Esta segunda llave es para un bloque de código JS
+								return(
+									<div id="conborde">
+										<h1> titulo: Avatar </h1>
+										<h2> genero: acción </h2>
+										<img src="img/R.png" width="100" height="107"></img>
+									</div>
+						
+								);
+							}
+				}
+			)		
+		ReactDOM.render(<Tarjeta />, document.getElementById("id1"))
+	</script>
+	
+	
+</body>
+
+</html>
