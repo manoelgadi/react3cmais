@@ -3,6 +3,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	
 	<style>
 		.conborde{
 			border: solid 1px green;
@@ -31,6 +32,9 @@
 		var Tarjeta = React.createClass(
 				{ //El parametro de createClass es un JSON, 
 				 //por lo que esta llave es para un JSON
+				    editar: function(){
+						alert(this.props.genero);
+					},					
 					render: function() //Una función anonima
 							{//Esta segunda llave es para un bloque de código JS
 								return(
@@ -38,6 +42,8 @@
 										<h1> titulo: {this.props.children} </h1>
 										<h2> genero: {this.props.genero} </h2>
 										<img src={this.props.imagen} />
+										<button onClick={this.editar}> Editar </button>
+										<button> Borrar </button>										
 									</div>
 						
 								);
