@@ -1,0 +1,57 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+	<style>
+		.conborde{
+			border: solid 1px green;
+			padding: 10px;
+			margin: 5px
+		}
+		.conbordereact{
+			border: solid 1px red;
+			padding: 10px;
+			margin: 5px
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<div id="id1" class="conborde"> </div>
+	<div id="id2" class="conborde"> </div>
+	<div id="id3" class="conborde"> </div>
+	<div id="id4" class="conborde"> </div>
+	<div id="id5" class="conborde"> </div>
+	<div id="id6" class="conborde"> </div>
+	
+	<script type="text/babel">
+		var Tarjeta = React.createClass(
+				{ //El parametro de createClass es un JSON, 
+				 //por lo que esta llave es para un JSON
+					render: function() //Una función anonima
+							{//Esta segunda llave es para un bloque de código JS
+								return(
+									<div className="conbordereact">
+										<h1> titulo: Avatar </h1>
+										<h2> genero: acción </h2>
+									</div>
+						
+								);
+							}
+				}
+			)		
+		ReactDOM.render(<Tarjeta />, document.getElementById("id1"))
+		ReactDOM.render(<Tarjeta />, document.getElementById("id2"))
+		ReactDOM.render(<Tarjeta />, document.getElementById("id3"))
+		ReactDOM.render(<Tarjeta />, document.getElementById("id4"))
+		ReactDOM.render(<Tarjeta />, document.getElementById("id5"))
+		ReactDOM.render(<Tarjeta />, document.getElementById("id6"))
+	</script>
+	
+	
+</body>
+
+</html>
